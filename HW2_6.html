@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+		let dep = +prompt("Укажите сумму вклада: ");
+
+		function func(deposit) {			
+			let lastTwo = (deposit % 100);
+			let message_1 = `Ваш вклад ${deposit} рублей`;
+			let message_2 = `Ваш вклад ${deposit} рубль`;
+			let message_3 = `Ваш вклад ${deposit} рубля`;
+			if (lastTwo >= 11 && lastTwo <= 14) {
+				return message_1;
+			} else {
+				let lastOne = deposit % 10;
+				switch (lastOne) {
+					case 1:
+						return message_2;
+						break;
+					case 2:
+					case 3:
+					case 4:
+						return message_3;
+						break;
+					default:						
+						return message_1;
+						break;
+				};
+			};		
+		};
+
+		alert(func(dep));
+	</script>
+</body>
+</html>
