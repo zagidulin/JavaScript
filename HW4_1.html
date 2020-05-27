@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+		'use strict'
+
+		function nummber(num) {
+			if (Number.isInteger(+num)) {
+				if (num >= 0 && num <= 999) {
+					this.units = num % 10;
+					this.tens = Math.floor(num % 100 / 10);
+					this.hundreds = Math.floor(num / 100) 
+				} else {
+					console.log("Число не входит в указанный диапазон")
+				}
+			} else {
+				console.log("Введённое значение не является целым числом")
+			}			
+		}
+
+		let a = prompt("Введите целое число от 0 до 999: ")
+
+		const num1 = new nummber(a);
+		console.log(num1)
+	</script>
+</body>
+</html>
