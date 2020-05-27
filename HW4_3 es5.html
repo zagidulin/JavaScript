@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+		'use strict';
+
+		function Post(author, text, date) {
+			this.author = author;
+			this.text = text;
+			this.date = date			
+		}
+
+		Post.prototype.edit = function () {
+			this.text = prompt("Введите текст")
+		}
+
+		const post_1 = new Post("user1", "some text", "01.01.2020");
+		
+		console.log(post_1); // Для проверки
+		
+		post_1.edit();
+
+		console.log(post_1); // Для проверки
+
+		function AttachedPost(author, text, date) {
+			Post.call(this, author, text, date);
+			this.highlighted = false
+		}
+
+		AttachedPost.prototype = Object.create(Post.prototype);
+		AttachedPost.prototype.constructor = AttachedPost;
+
+
+		AttachedPost.prototype.makeTextHighlighted = function () {
+			this.highlighted = true
+		}
+
+		const attachedpost_1 = new AttachedPost("user1", "other text", "01.01.2020");
+
+		console.log(attachedpost_1);
+
+		attachedpost_1.makeTextHighlighted();
+		attachedpost_1.edit();
+		console.log(attachedpost_1);
+	</script>
+</body>
+</html>
