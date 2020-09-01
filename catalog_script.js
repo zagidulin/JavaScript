@@ -41,15 +41,12 @@ class ProductsList {
 	_getProducts() {
 		this.products = products;
 		this.filteredProducts = this.products;
-		console.log('this.filteredProducts', this.filteredProducts)
 	}
 
 	render(list) {
 		if (list && list.length > 0) {
-			console.log(list);
 			this.filteredProducts = list;
 		} else {
-			console.log(list);
 			this._getProducts();
 		}
 				
