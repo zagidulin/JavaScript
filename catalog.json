@@ -1,4 +1,4 @@
-const products = [
+[
 	{
 		"title": "Rollerblade Twister Edge",
 		"price": 150,
