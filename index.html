@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>Rollerskates</title>
+		<link rel="stylesheet" href="style.css">
+		<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+	</head>
+	<body>
+		<div class="wraper">
+			<div class="header">
+				<div id="logo">
+					<img src="image/logo_2.png" alt="logo">
+				</div>
+				<div class="main_menu">
+					<ul class="menulist">
+						<li><a href="index.html">Главная</a></li>
+						<li><a href="#">Каталог</a></li>
+						<li><a href="contacts.html">Контакты</a></li>
+					</ul>
+					<div class="cart">
+						<a href="#" class = "cart-button" >Корзина</a>
+					</div>
+				</div>
+			</div>
+			<hr>
+			<h1>Роликовые коньки</h1>
+			<div class="catalog-menu">
+				<ul>
+					<li class="catalog-menu-list catalog-active"><a href="catalog.html" class="catalog-link">ВСЕ</a></li>
+					<li class="catalog-menu-list"><a href="#" class="catalog-link">ФИТНЕС</a></li>
+					<li class="catalog-menu-list"><a href="#" class="catalog-link">ФРИСКЕЙТ</a></li>
+					<li class="catalog-menu-list"><a href="#" class="catalog-link">АГРЕССИВ</a></li>
+					<li class="catalog-menu-list"><a href="#" class="catalog-link">ДЕТСКИЕ</a></li>
+				</ul>
+			</div>
+			<div class="searchapp">
+				<search-field></search-field>
+			<!-- <div class="search clearfix">
+				Поиск по каталогу:
+				<input
+					type="text" size="20" class="products_filter"
+					v-bind:value="productName"
+					v-on:input="filter($event)"
+				>
+			</div> -->
+				<!-- <input type="submit" id="find" value="искать"> -->
+			</div>
+			
+			<div class="catalog">
+				
+			</div>
+			<div class="basketapp">
+		        <basket-list></basket-list>
+		    </div>
+			<div class="forfooter"></div>
+		</div>
+		<div class="footer">
+			<hr>
+			<p><i>Все права защищены &copy;</i></p>
+		</div>
+		<script src="catalog_script.js" type="text/javascript"></script>
+		<script src="basket_script.js" type="text/javascript"></script>
+		<script src="main.js" type="text/javascript"></script>
+	</body>
+</html>
